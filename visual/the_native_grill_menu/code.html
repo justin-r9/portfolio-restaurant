@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu - The Native Grill</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#bee9ff",
+                        "on-secondary-fixed": "#380d00",
+                        "outline-variant": "#5b403d",
+                        "on-primary-fixed-variant": "#930010",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#f95e14",
+                        "surface-tint": "#ffb3ac",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#ba1a20",
+                        "tertiary-container": "#00799c",
+                        "tertiary": "#7bd1f8",
+                        "on-tertiary": "#003546",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#ab8985",
+                        "on-tertiary-container": "#e9f7ff",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "primary-container": "#d32f2f",
+                        "secondary-fixed": "#ffdbcf",
+                        "surface-variant": "#353534",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-primary": "#680008",
+                        "on-primary-container": "#fff2f0",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#313030",
+                        "primary": "#ffb3ac",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "on-primary-fixed": "#410003",
+                        "on-surface-variant": "#e4beba",
+                        "on-secondary": "#5b1b00",
+                        "error": "#ffb4ab",
+                        "secondary": "#ffb59a",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-secondary-container": "#4f1700",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "container-max-width": "1200px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-on-surface/10 flat no shadows">
+<div class="flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-container-max-width mx-auto">
+<button aria-label="Menu" class="text-primary dark:text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<a class="font-headline-md text-headline-md md:text-headline-md tracking-tight text-on-surface dark:text-on-surface hover:opacity-80 transition-opacity active:scale-95 transition-transform" href="#">
+                The Native Grill
+            </a>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<!-- Page Header -->
+<section class="relative h-[353px] min-h-[300px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Close-up of premium meat cooking on a hot, smoky charcoal grill." class="w-full h-full object-cover opacity-40" data-alt="A moody, cinematic close-up of premium meat sizzling on a dark, smoky charcoal grill. Glowing red embers illuminate the dark surface, perfectly capturing the 'Refined Embers' aesthetic of The Native Grill. The lighting is low-key, creating deep shadows and highlighting the texture of the grill and the heat of the fire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy85ZO6--oTkkg5mGRgUmnrEpJUiNGvJp50r8jicVlCNr9IGghHHh5lGqzdw0PRfVlWff8Eg_vEmrAjr7WV4QomSzTXwr6dNgBh7BZ1y7sC1daFwtqAZuArkVd497AqbhaEgXUw7kSlE0fg25EKxtr-9O6GJFb46N8EG21BPBu0W943Bzj5B97MJ9QcVrG43ql0UFqN3HmzqdMTGS0-0SFOq1as5QGGL_p2rd2nQpGBkgB62uWofUtdoeiT54XqqKv2NpfIobXfQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Our Menu</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Elevated Nigerian street flavors, crafted for the discerning palate.</p>
+</div>
+</section>
+<!-- Category Navigation (Sticky) -->
+<div class="sticky top-16 z-40 bg-surface/90 backdrop-blur-md border-b border-on-surface/10 py-4">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<ul class="flex overflow-x-auto gap-4 no-scrollbar pb-2 items-center">
+<li><a class="whitespace-nowrap px-6 py-2 rounded-full border border-primary-container bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider transition-all" href="#starters">Starters</a></li>
+<li><a class="whitespace-nowrap px-6 py-2 rounded-full border border-on-surface/10 text-on-surface-variant hover:text-primary transition-all font-label-sm text-label-sm uppercase tracking-wider" href="#grill">The Grill</a></li>
+<li><a class="whitespace-nowrap px-6 py-2 rounded-full border border-on-surface/10 text-on-surface-variant hover:text-primary transition-all font-label-sm text-label-sm uppercase tracking-wider" href="#mains">Mains</a></li>
+<li><a class="whitespace-nowrap px-6 py-2 rounded-full border border-on-surface/10 text-on-surface-variant hover:text-primary transition-all font-label-sm text-label-sm uppercase tracking-wider" href="#drinks">Drinks</a></li>
+</ul>
+</div>
+</div>
+<!-- Menu Content -->
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24 space-y-24">
+<!-- Category: Starters -->
+<section class="scroll-mt-32" id="starters">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 border-b border-on-surface/10 pb-4">Starters</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Item 1 -->
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                                Suya Spiced Calamari
+                                <span class="inline-flex items-center justify-center bg-surface-container border border-secondary-container rounded-full px-2 py-0.5" title="Spicy">
+<span class="material-symbols-outlined text-secondary-container" style="font-size: 14px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</span>
+</h3>
+<span class="font-headline-md text-headline-md text-on-surface ml-4">₦6,500</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Lightly dusted calamari rings, tossed in our signature Yaji spice blend, served with a charred lemon aioli.</p>
+<div class="w-full h-px bg-on-surface/10 mt-6"></div>
+</article>
+<!-- Item 2 -->
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                                Plantain &amp; Pepper Soup Shooters
+                            </h3>
+<span class="font-headline-md text-headline-md text-on-surface ml-4">₦4,500</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Rich, aromatic goat meat broth served alongside caramelized sweet plantain skewers.</p>
+<div class="w-full h-px bg-on-surface/10 mt-6"></div>
+</article>
+<!-- Item 3 -->
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                                Smoked Asun Tostadas
+                                <span class="inline-flex items-center justify-center bg-surface-container border border-secondary-container rounded-full px-2 py-0.5" title="Spicy">
+<span class="material-symbols-outlined text-secondary-container" style="font-size: 14px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</span>
+</h3>
+<span class="font-headline-md text-headline-md text-on-surface ml-4">₦7,000</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Spicy smoked goat meat on crisp corn tortillas with a cooling avocado and cilantro crema.</p>
+<div class="w-full h-px bg-on-surface/10 mt-6"></div>
+</article>
+</div>
+</section>
+<!-- Category: The Grill (Featured) -->
+<section class="scroll-mt-32" id="grill">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 border-b border-on-surface/10 pb-4">The Grill</h2>
+<div class="grid grid-cols-1 gap-12">
+<!-- Featured Item -->
+<article class="relative bg-surface-container rounded-xl overflow-hidden group border border-on-surface/10 shadow-20px-40px-rgba(0,0,0,0.5)">
+<div class="h-[400px] w-full relative">
+<img alt="A perfectly grilled Wagyu beef skewer, heavily crusted with red spices." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast shot of a single, thick-cut Wagyu beef skewer resting on a dark slate board. The meat is heavily coated in a vibrant red Suya spice blend. The lighting is moody, highlighting the texture of the spice crust and the glistening juices of the premium meat against the pure black background. The scene exudes high-end dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZhVSsuJ5_QYtHcaruUlAQG-0z7m1IyKweBlY_dzvkcRTFqml3DvqzQc_BLoWIZ8TFDXOhY4h9fYcGr9IEMMM_sfhRqK4hX1imM4351DWUGRWvMZ6yy5PlaDzKGJF6YOcAH1rl29FtmZgEaYCWPdpuys-728xYcPurWf90Fkk9gIpMmS3SWE9NeOq6RP5vEwtImtYoCX-oSma4NQn9M7OshB17FZZRvTc8djc3M81Iz5MQWtwxKEMOBe3BK6suc2wOVvpHYbdChQ"/>
+<!-- Smoky Glass Overlay -->
+<div class="absolute inset-x-0 bottom-0 p-8 bg-surface/80 backdrop-blur-xl border-t border-on-surface/10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div class="max-w-xl">
+<div class="flex items-center gap-3 mb-2">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Wagyu Beef Suya</h3>
+<span class="inline-flex items-center justify-center bg-surface-container-low border border-secondary-container rounded-full px-2 py-1" title="Spicy">
+<span class="material-symbols-outlined text-secondary-container" style="font-size: 16px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">A5 Wagyu sirloin cubes, extensively marinated in our heritage Yaji spice, slow-grilled over hardwood embers. Served with charred onions and tomatoes.</p>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary">₦35,000</span>
+</div>
+</div>
+</article>
+<!-- Regular Items Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mt-8">
+<!-- Item 4 -->
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                                    Classic Beef Suya
+                                    <span class="inline-flex items-center justify-center bg-surface-container border border-secondary-container rounded-full px-2 py-0.5" title="Spicy">
+<span class="material-symbols-outlined text-secondary-container" style="font-size: 14px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</span>
+</h3>
+<span class="font-headline-md text-headline-md text-on-surface ml-4">₦8,500</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Prime beef cut, traditional Yaji spice, perfectly charred.</p>
+<div class="w-full h-px bg-on-surface/10 mt-6"></div>
+</article>
+<!-- Item 5 -->
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                                    Chicken Suya Wings
+                                </h3>
+<span class="font-headline-md text-headline-md text-on-surface ml-4">₦7,500</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Deboned chicken wings, double-marinated, grilled to a crisp finish.</p>
+<div class="w-full h-px bg-on-surface/10 mt-6"></div>
+</article>
+</div>
+</div>
+</section>
+<!-- Category: Mains -->
+<section class="scroll-mt-32" id="mains">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 border-b border-on-surface/10 pb-4">Mains</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Item 6 -->
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                Native Seafood Rice
+                            </h3>
+<span class="font-headline-md text-headline-md text-on-surface ml-4">₦18,000</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Smoky Jollof-style rice enriched with palm oil, fresh prawns, calamari, and smoked catfish flakes.</p>
+<div class="w-full h-px bg-on-surface/10 mt-6"></div>
+</article>
+<!-- Item 7 -->
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                Whole Grilled Croaker
+                            </h3>
+<span class="font-headline-md text-headline-md text-on-surface ml-4">₦22,000</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Locally sourced croaker, butterflied and grilled with a robust ginger, garlic, and habanero marinade. Served with roasted plantains.</p>
+<div class="w-full h-px bg-on-surface/10 mt-6"></div>
+</article>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-on-surface/10 w-full flat no shadows">
+<div class="flex flex-col gap-12 px-margin-mobile md:px-margin-desktop py-16 max-w-container-max-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="font-headline-md text-headline-md text-on-surface">The Native Grill</div>
+<nav class="flex flex-wrap gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors transition-all" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors transition-all" href="#">Facebook</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors transition-all" href="#">Twitter</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors transition-all" href="#">Contact Us</a>
+</nav>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm pt-8 border-t border-on-surface/5">
+                © 2024 The Native Grill. Refined Embers.
+            </div>
+</div>
+</footer>
+</body></html>

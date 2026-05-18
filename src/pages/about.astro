@@ -1,0 +1,65 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<MainLayout title="Our Story - The Native Grill">
+  <Header />
+  
+  <main class="flex-grow pt-16">
+    <!-- Page Header -->
+    <section class="relative h-[353px] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="/images/spices_1779117880508.png" alt="A moody, top-down shot of vibrant spices" class="w-full h-full object-cover opacity-50" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+      </div>
+      <div class="relative z-10 text-center px-margin-mobile">
+        <h1 class="font-display-lg-mobile md:font-display-lg text-[40px] md:text-[64px] text-on-surface mb-4">Our Story</h1>
+        <p class="font-body-lg text-[18px] text-on-surface-variant max-w-2xl mx-auto">From the bustling streets to the refined plate.</p>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="py-24 bg-background border-b border-on-surface/10">
+      <div class="max-w-[800px] mx-auto px-margin-mobile text-center">
+        <span class="material-symbols-outlined text-[48px] text-primary-container mb-8">local_fire_department</span>
+        <h2 class="font-headline-lg text-[32px] text-on-surface mb-8">The spark that started it all.</h2>
+        <div class="font-body-md text-[16px] text-on-surface-variant space-y-6 leading-relaxed">
+          <p>The Native Grill was born out of a profound respect for the Mai Suya—the unsung culinary artists of Nigeria's streets. Their mastery of smoke, spice, and fire is an intricate dance that produces flavors unlike any other.</p>
+          <p>We wanted to take that visceral, deeply nostalgic experience and place it in an environment that honors its complexity. No shortcuts. Just premium ingredients, ancestral recipes passed down through generations, and the transformative power of hardwood embers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Narrative (Masonry-ish) -->
+    <section class="py-24 bg-surface">
+      <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter">
+        
+        <!-- Large Image -->
+        <div class="col-span-1 md:col-span-7 aspect-[4/3] rounded-xl overflow-hidden border border-on-surface/10 relative">
+          <img src="/images/chef_story_1779117862878.png" alt="Chef plating" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-8">
+            <h3 class="font-headline-md text-[24px] text-on-surface">Meticulous Craft</h3>
+            <p class="font-body-md text-[16px] text-on-surface-variant">Every plate is a canvas.</p>
+          </div>
+        </div>
+
+        <!-- Right Column (Text + Small Image) -->
+        <div class="col-span-1 md:col-span-5 flex flex-col gap-8">
+          <div class="bg-surface-container rounded-xl p-8 border border-on-surface/10 flex-grow flex flex-col justify-center">
+            <p class="font-headline-md text-[24px] text-on-surface italic mb-4">"We don't just cook food; we curate memories heavily spiced with nostalgia."</p>
+            <p class="font-label-sm text-[12px] text-primary-container uppercase tracking-wider">— Head Chef, Tunde A.</p>
+          </div>
+          <div class="aspect-video rounded-xl overflow-hidden border border-on-surface/10 relative">
+             <img src="/images/spices_1779117880508.png" alt="Spice blend" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</MainLayout>

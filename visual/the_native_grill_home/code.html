@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Native Grill - Refined Embers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed": "#bee9ff",
+                      "on-secondary-fixed": "#380d00",
+                      "outline-variant": "#5b403d",
+                      "on-primary-fixed-variant": "#930010",
+                      "error-container": "#93000a",
+                      "surface": "#131313",
+                      "surface-container": "#201f1f",
+                      "on-surface": "#e5e2e1",
+                      "secondary-container": "#f95e14",
+                      "surface-tint": "#ffb3ac",
+                      "surface-dim": "#131313",
+                      "primary-fixed": "#ffdad6",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-primary": "#ba1a20",
+                      "tertiary-container": "#00799c",
+                      "tertiary": "#7bd1f8",
+                      "on-tertiary": "#003546",
+                      "surface-container-low": "#1c1b1b",
+                      "outline": "#ab8985",
+                      "on-tertiary-container": "#e9f7ff",
+                      "inverse-surface": "#e5e2e1",
+                      "secondary-fixed-dim": "#ffb59a",
+                      "primary-container": "#d32f2f",
+                      "secondary-fixed": "#ffdbcf",
+                      "surface-variant": "#353534",
+                      "surface-bright": "#393939",
+                      "on-tertiary-fixed-variant": "#004d65",
+                      "on-tertiary-fixed": "#001f2a",
+                      "on-primary": "#680008",
+                      "on-primary-container": "#fff2f0",
+                      "on-error": "#690005",
+                      "inverse-on-surface": "#313030",
+                      "primary": "#ffb3ac",
+                      "on-secondary-fixed-variant": "#802a00",
+                      "on-primary-fixed": "#410003",
+                      "on-surface-variant": "#e4beba",
+                      "on-secondary": "#5b1b00",
+                      "error": "#ffb4ab",
+                      "secondary": "#ffb59a",
+                      "tertiary-fixed-dim": "#7bd1f8",
+                      "surface-container-lowest": "#0e0e0e",
+                      "background": "#131313",
+                      "surface-container-highest": "#353534",
+                      "primary-fixed-dim": "#ffb3ac",
+                      "on-secondary-container": "#4f1700",
+                      "on-background": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "80px",
+                      "unit": "8px",
+                      "container-max-width": "1200px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-on-surface/10 flat no shadows">
+<div class="flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-container-max-width mx-auto">
+<button class="text-primary dark:text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined font-headline-md text-headline-md">menu</span>
+</button>
+<div class="font-headline-md text-headline-md-mobile md:text-headline-md tracking-tight text-on-surface dark:text-on-surface">
+                The Native Grill
+            </div>
+<!-- Hidden Desktop Nav for context -->
+<nav class="hidden md:flex gap-8 items-center font-body-md text-body-md">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Menu</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Reservations</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center pt-16">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-surface-container-lowest">
+<img alt="Cinematic close-up of premium meat cooking on a traditional charcoal grill with sparks and smoke." class="w-full h-full object-cover opacity-60 mix-blend-overlay" data-alt="A moody, cinematic shot of premium meat cooking on a hot charcoal grill. Deep, rich shadows envelop the scene, pierced by the bright, fiery orange of hot embers and sparks dancing in the air. The atmosphere is warm, visceral, and upscale, perfectly capturing the essence of 'Refined Embers' with a sophisticated dark-mode aesthetic. Focus is tight on the texture of the grill and the rising smoke." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcjqiEMsJ2WWWhlg4KaXl_VyyTaTuVRFJPotBVQ9JgO1zU7iW-AbH44KMFw92xk3FAMzvT7kMBpi8dvwdA3x-WDIZo7QXOwrV1-gtL-q9E_WYuzoenzJkI63GTQ41ZiiFrRu-MvslhXLx_GpuasTPlcg3HKukgZqC_KMTIqC9hK7Ktid-_tXu1jPJ62FsEeX6jtkOUtCsIC3RV6i07eGBQWD5j2PxRyrkGUFSOgr73QJxqjcppPdJ52eY_CtLwQ80oszxkpAoHHQ"/>
+<!-- Smoked Glass Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col items-center text-center px-margin-mobile max-w-[800px]">
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-6 drop-shadow-2xl">
+                    Premium Grills.<br/>Authentic Naija Flavours.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-[600px]">
+                    Elevating the raw energy of street food into a curated, sensory dining experience.
+                </p>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-inverse-primary transition-colors active:scale-95 shadow-20px-40px-rgba(0,0,0,0.5)">
+                    Explore Our Menu
+                </button>
+</div>
+</section>
+<!-- Quick Info Bar -->
+<section class="py-12 bg-surface border-y border-on-surface/10">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-gutter">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Hours</h3>
+<p class="font-body-md text-body-md text-on-surface">Tue - Sun: 5PM - Late</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Location</h3>
+<p class="font-body-md text-body-md text-on-surface">Independence Layout, Enugu</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">call</span>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Contact</h3>
+<p class="font-body-md text-body-md text-on-surface">+234 (0) 800 NATIVE</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Dishes Carousel -->
+<section class="py-24 bg-background overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface border-l-2 border-primary-container pl-4">Signatures</h2>
+</div>
+<div class="flex overflow-x-auto pb-8 gap-6 px-margin-mobile md:px-margin-desktop snap-x snap-mandatory hide-scrollbar">
+<!-- Card 1 -->
+<div class="min-w-[280px] md:min-w-[360px] snap-center bg-surface-container rounded-lg border border-on-surface/10 overflow-hidden group">
+<div class="relative aspect-square">
+<img alt="Gourmet beef suya presented elegantly." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-end culinary photograph of a beautifully plated beef suya dish. The dark background emphasizes the rich reds and deep browns of the grilled meat, dusted with aromatic spices. A soft, focused light highlights the texture of the dish, giving it a premium, restaurant-quality appearance consistent with a refined dark-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCluBrQcDO4LbBV0Va_vHfYOmdAEzLTlOIc4PUNlX-3wGC9GWVovVPjsWfhFwXUbkQy_VlZfr9DD1fiRf3RF3nhh-_L68Xj-0QT-6mMLL6J3tQyQU23rALlKBQOOfNVd7Y1XjubUcLZP7jP0paVrzjDRKjIykLifU-up3-SQgcjaeakPaQb-eceBdr6uMSGgFmcvb5ntoHFon5hpqKuXP2BXHPxw7FIl5jm8zaehEWOlLlM4_LF69rMVCopWgub76lsGIClwrW1Jg"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Signature Beef Suya</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Prime cuts marinated in our ancestral Yaji spice blend, slow-grilled over charcoal.</p>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container hover:text-primary transition-colors flex items-center gap-1" href="#">
+                                View Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] md:min-w-[360px] snap-center bg-surface-container rounded-lg border border-on-surface/10 overflow-hidden group">
+<div class="relative aspect-square">
+<img alt="Grilled tiger prawns." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An elegant, dimly lit photograph of large, grilled tiger prawns on a dark slate plate. A subtle wisp of smoke lingers in the air, capturing the essence of the grill. The lighting is dramatic and directional, accentuating the char marks and vibrant orange hues of the seafood against the pitch-black background, fitting perfectly into the 'Refined Embers' design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWpioTEISjENUforY1LxSSTxaoGQQFVydBgUTaKUZBjPY-es_ueWND81UR1nOhFZ_7QTFrBHwv7xEXiIefW1qlbEX7ON72DI_q1ZLq5kqCp5R21oFiDY9C8Ngn4BYd_exI-xdwngRsXaKb9DfwYHQ55jXoOqQl6MWg7T0ufy94qQZo8Tym7Tc4dNdoZYBmOuCqLuwnq2AyyBcm7lfnWgQqzGubo-4YGuAIfY0QiccYfKnnwIR3tTfk9J1uUmMHPMMxVgNjs1BuQA"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Fire-Roasted Prawns</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Jumbo tiger prawns kissed by the flames, served with a charred citrus glaze.</p>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container hover:text-primary transition-colors flex items-center gap-1" href="#">
+                                View Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[280px] md:min-w-[360px] snap-center bg-surface-container rounded-lg border border-on-surface/10 overflow-hidden group">
+<div class="relative aspect-square">
+<img alt="Artisanal cocktail with smoke." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated, low-key lighting shot of an artisanal cocktail sitting on a dark wooden bar counter. A heavy, smoky aroma envelops the glass, creating an atmosphere of mystery and luxury. Deep crimson and amber tones dominate the drink, contrasting beautifully with the surrounding darkness, reflecting the premium lounge aesthetic of the restaurant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT2vOhpcXPXia_1fVnncX1Ub41qkE3Yx87SBryIgCJNMZq-AC7elZrNSMvc7lmlzWQJCMbFydFm-3LcFcUGb5hSVyB7rY5CQTtHvXqAwq33UDRy2AwmlcxVlMAP8cf6pa2tb1M2E-j7jPcKrbnMbo_LHqbb_kWYsMD07p_UdBehdTvsEC52BE9QBSVkpVJTBYUV2A1kbpOOV5tPcbDgbr4vqCNZ1YwwUk0sX5SJX7UGUGruGtceZylDsN34Qaf3xyq-evzjURB9g"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Smoked Embers Cocktail</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">A complex blend of aged spirits, infused with hickory smoke and local bitters.</p>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container hover:text-primary transition-colors flex items-center gap-1" href="#">
+                                View Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Teaser -->
+<section class="py-24 bg-surface border-t border-on-surface/10">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="relative aspect-[4/5] rounded-lg overflow-hidden border border-on-surface/10">
+<img alt="Upscale dark interior of the restaurant." class="w-full h-full object-cover" data-alt="A high-quality architectural photograph of a dimly lit, luxurious restaurant interior. The space features minimalist design, plush dark seating, and subtle, warm accent lighting that creates a feeling of exclusivity and intimacy. The aesthetic perfectly embodies a high-end lounge environment, relying on deep shadows and refined textures like dark wood and glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEZvS3HKsWs4J8hgTaqpVp5YkQcGlepGEk901wVN6JHqOUtHq-D1VRjFxzZl-wYpxELE-YUNiJRu5Y8r8QPNSCzRPcHbeAUEO4PtJYvxyee3sAMeJN9dwMMppUgu3g3-3bOEgBOsko6V-vkn938grUGyLr3QoJL3qq7A4QTBnR4iMAof8p3i_W2SMO3PjzyIJkXHl7JwEg7MsPUCdPxSe18MVofmG4qFYaI1JYul63MZSRnu48HPju6wHfcObGLw1nJCorPi01Dg"/>
+</div>
+<div class="flex flex-col items-start max-w-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">The Art of the Flame</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Born from a reverence for traditional Nigerian grilling techniques, The Native Grill redefines the Suya experience. We believe that true flavor lies in the careful balance of heat, smoke, and time. Our space is designed to immerse you in this primal yet refined atmosphere, where every bite tells a story of heritage and culinary craftsmanship.
+                    </p>
+<button class="bg-transparent border border-on-surface/30 text-on-surface px-8 py-4 rounded font-label-sm text-label-sm uppercase tracking-widest hover:border-primary-container hover:text-primary-container transition-colors active:scale-95">
+                        Read Our Story
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-on-surface/10 flat no shadows">
+<div class="flex flex-col gap-12 px-margin-mobile py-16 max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-on-surface">
+                The Native Grill
+            </div>
+<nav class="flex flex-col md:flex-row gap-6 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Facebook</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
+</nav>
+<div class="text-on-surface-variant font-body-md text-body-md pt-8 border-t border-on-surface/10">
+                © 2024 The Native Grill. Refined Embers.
+            </div>
+</div>
+</footer>
+</body></html>

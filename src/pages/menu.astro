@@ -1,0 +1,217 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<MainLayout title="Menu - The Native Grill">
+  <Header />
+  
+  <main class="flex-grow pt-16">
+    <!-- Page Header -->
+    <section class="relative h-[353px] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="/images/hero_bg_1779117776774.png" alt="Close-up of premium meat cooking on a hot, smoky charcoal grill" class="w-full h-full object-cover opacity-50" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+      </div>
+      <div class="relative z-10 text-center px-margin-mobile">
+        <h1 class="font-display-lg-mobile md:font-display-lg text-[40px] md:text-[64px] text-on-surface mb-4">Our Menu</h1>
+        <p class="font-body-lg text-[18px] text-on-surface-variant max-w-2xl mx-auto">Elevated Nigerian street flavors, crafted for the discerning palate.</p>
+      </div>
+    </section>
+
+    <!-- Category Navigation (Sticky) -->
+    <div class="sticky top-16 z-40 bg-surface/90 backdrop-blur-md border-b border-on-surface/10 py-4">
+      <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+        <ul class="flex overflow-x-auto gap-4 no-scrollbar py-2 items-center">
+          <li><a href="#starters" class="whitespace-nowrap px-6 py-2 rounded-full border border-primary-container bg-primary-container text-on-primary-container font-label-sm text-[12px] uppercase tracking-wider transition-all">Starters</a></li>
+          <li><a href="#grill" class="whitespace-nowrap px-6 py-2 rounded-full border border-on-surface/10 text-on-surface-variant hover:text-primary transition-all font-label-sm text-[12px] uppercase tracking-wider">The Grill</a></li>
+          <li><a href="#mains" class="whitespace-nowrap px-6 py-2 rounded-full border border-on-surface/10 text-on-surface-variant hover:text-primary transition-all font-label-sm text-[12px] uppercase tracking-wider">Mains</a></li>
+          <li><a href="#drinks" class="whitespace-nowrap px-6 py-2 rounded-full border border-on-surface/10 text-on-surface-variant hover:text-primary transition-all font-label-sm text-[12px] uppercase tracking-wider">Drinks</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Menu Content -->
+    <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24 space-y-24">
+      
+      <!-- Category: Starters -->
+      <section id="starters" class="scroll-mt-32">
+        <h2 class="font-headline-lg text-[32px] text-on-surface mb-12 border-b border-on-surface/10 pb-4">Starters</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          <article class="group">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                Suya Spiced Calamari
+                <span class="inline-flex items-center justify-center bg-surface-container border border-secondary-container rounded-full px-2 py-0.5" title="Spicy">
+                  <span class="material-symbols-outlined text-secondary-container" style="font-size: 14px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                </span>
+              </h3>
+              <span class="font-headline-md text-[24px] text-on-surface ml-4">₦6,500</span>
+            </div>
+            <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Lightly dusted calamari rings, tossed in our signature Yaji spice blend, served with a charred lemon aioli.</p>
+            <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+          </article>
+
+          <article class="group">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                Plantain & Pepper Soup Shooters
+              </h3>
+              <span class="font-headline-md text-[24px] text-on-surface ml-4">₦4,500</span>
+            </div>
+            <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Rich, aromatic goat meat broth served alongside caramelized sweet plantain skewers.</p>
+            <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+          </article>
+
+          <article class="group">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                Smoked Asun Tostadas
+                <span class="inline-flex items-center justify-center bg-surface-container border border-secondary-container rounded-full px-2 py-0.5" title="Spicy">
+                  <span class="material-symbols-outlined text-secondary-container" style="font-size: 14px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                </span>
+              </h3>
+              <span class="font-headline-md text-[24px] text-on-surface ml-4">₦7,000</span>
+            </div>
+            <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Spicy smoked goat meat on crisp corn tortillas with a cooling avocado and cilantro crema.</p>
+            <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Category: The Grill (Featured) -->
+      <section id="grill" class="scroll-mt-32">
+        <h2 class="font-headline-lg text-[32px] text-on-surface mb-12 border-b border-on-surface/10 pb-4">The Grill</h2>
+        <div class="grid grid-cols-1 gap-12">
+          <!-- Featured Item -->
+          <article class="relative bg-surface-container rounded-xl overflow-hidden group border border-on-surface/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
+            <div class="h-[400px] w-full relative">
+              <img src="/images/beef_suya_1779117790873.png" alt="Wagyu beef skewer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <!-- Smoky Glass Overlay -->
+              <div class="absolute inset-x-0 bottom-0 p-8 bg-surface/80 backdrop-blur-xl border-t border-on-surface/10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                <div class="max-w-xl">
+                  <div class="flex items-center gap-3 mb-2">
+                    <h3 class="font-headline-lg text-[32px] text-on-surface">Wagyu Beef Suya</h3>
+                    <span class="inline-flex items-center justify-center bg-surface-container-low border border-secondary-container rounded-full px-2 py-1" title="Spicy">
+                      <span class="material-symbols-outlined text-secondary-container" style="font-size: 16px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    </span>
+                  </div>
+                  <p class="font-body-md text-[16px] text-on-surface-variant">A5 Wagyu sirloin cubes, extensively marinated in our heritage Yaji spice, slow-grilled over hardwood embers. Served with charred onions and tomatoes.</p>
+                </div>
+                <span class="font-headline-lg text-[32px] text-primary">₦35,000</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Regular Items Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mt-8">
+            <article class="group">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                  Classic Beef Suya
+                  <span class="inline-flex items-center justify-center bg-surface-container border border-secondary-container rounded-full px-2 py-0.5" title="Spicy">
+                    <span class="material-symbols-outlined text-secondary-container" style="font-size: 14px; font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                  </span>
+                </h3>
+                <span class="font-headline-md text-[24px] text-on-surface ml-4">₦8,500</span>
+              </div>
+              <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Prime beef cut, traditional Yaji spice, perfectly charred.</p>
+              <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+            </article>
+
+            <article class="group">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                  Chicken Suya Wings
+                </h3>
+                <span class="font-headline-md text-[24px] text-on-surface ml-4">₦7,500</span>
+              </div>
+              <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Deboned chicken wings, double-marinated, grilled to a crisp finish.</p>
+              <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category: Mains -->
+      <section id="mains" class="scroll-mt-32">
+        <h2 class="font-headline-lg text-[32px] text-on-surface mb-12 border-b border-on-surface/10 pb-4">Mains</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          <article class="group">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">
+                Native Seafood Rice
+              </h3>
+              <span class="font-headline-md text-[24px] text-on-surface ml-4">₦18,000</span>
+            </div>
+            <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Smoky Jollof-style rice enriched with palm oil, fresh prawns, calamari, and smoked catfish flakes.</p>
+            <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+          </article>
+
+          <article class="group">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">
+                Whole Grilled Croaker
+              </h3>
+              <span class="font-headline-md text-[24px] text-on-surface ml-4">₦22,000</span>
+            </div>
+            <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Locally sourced croaker, butterflied and grilled with a robust ginger, garlic, and habanero marinade. Served with roasted plantains.</p>
+            <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Category: Drinks -->
+      <section id="drinks" class="scroll-mt-32">
+        <h2 class="font-headline-lg text-[32px] text-on-surface mb-12 border-b border-on-surface/10 pb-4">Drinks</h2>
+        <div class="grid grid-cols-1 gap-12">
+          <!-- Featured Drink -->
+          <article class="relative bg-surface-container rounded-xl overflow-hidden group border border-on-surface/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
+            <div class="h-[400px] w-full relative">
+              <img src="/images/smoked_cocktail_1779117825097.png" alt="Smoked Embers Cocktail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <!-- Smoky Glass Overlay -->
+              <div class="absolute inset-x-0 bottom-0 p-8 bg-surface/80 backdrop-blur-xl border-t border-on-surface/10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                <div class="max-w-xl">
+                  <div class="flex items-center gap-3 mb-2">
+                    <h3 class="font-headline-lg text-[32px] text-on-surface">Smoked Embers Cocktail</h3>
+                  </div>
+                  <p class="font-body-md text-[16px] text-on-surface-variant">A complex blend of aged spirits, infused with hickory smoke and local bitters. Served over a single, hand-carved ice sphere.</p>
+                </div>
+                <span class="font-headline-lg text-[32px] text-primary">₦5,500</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Regular Items Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mt-8">
+            <article class="group">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                  Zobo Hibiscus Splash
+                </h3>
+                <span class="font-headline-md text-[24px] text-on-surface ml-4">₦3,000</span>
+              </div>
+              <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Traditional hibiscus iced tea with ginger, cloves, and a hint of fresh pineapple.</p>
+              <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+            </article>
+
+            <article class="group">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors flex items-center gap-2">
+                  Palm Wine Margarita
+                </h3>
+                <span class="font-headline-md text-[24px] text-on-surface ml-4">₦6,000</span>
+              </div>
+              <p class="font-body-md text-[16px] text-on-surface-variant leading-relaxed">Fresh palm wine blended with premium tequila and a chili-salt rim.</p>
+              <div class="w-full h-px bg-on-surface/10 mt-6"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  </main>
+  
+  <Footer />
+</MainLayout>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Reservations - The Native Grill</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#bee9ff",
+                        "on-secondary-fixed": "#380d00",
+                        "outline-variant": "#5b403d",
+                        "on-primary-fixed-variant": "#930010",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#f95e14",
+                        "surface-tint": "#ffb3ac",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#ba1a20",
+                        "tertiary-container": "#00799c",
+                        "tertiary": "#7bd1f8",
+                        "on-tertiary": "#003546",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#ab8985",
+                        "on-tertiary-container": "#e9f7ff",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "primary-container": "#d32f2f",
+                        "secondary-fixed": "#ffdbcf",
+                        "surface-variant": "#353534",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-primary": "#680008",
+                        "on-primary-container": "#fff2f0",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#313030",
+                        "primary": "#ffb3ac",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "on-primary-fixed": "#410003",
+                        "on-surface-variant": "#e4beba",
+                        "on-secondary": "#5b1b00",
+                        "error": "#ffb4ab",
+                        "secondary": "#ffb59a",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-secondary-container": "#4f1700",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "container-max-width": "1200px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-on-surface/10">
+<div class="flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-container-max-width mx-auto">
+<h1 class="font-headline-md text-headline-md md:text-headline-md tracking-tight text-on-surface dark:text-on-surface cursor-pointer hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+                The Native Grill
+            </h1>
+<button class="text-primary dark:text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-[120px] pb-[80px] px-margin-mobile md:px-margin-desktop w-full max-w-container-max-width mx-auto">
+<!-- Page Header -->
+<section class="mb-16 md:mb-24">
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-4">Contact &amp; Bookings</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Secure your table at The Native Grill or reach out to us for special inquiries and private dining arrangements.</p>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Booking Form Column -->
+<div class="lg:col-span-7 bg-[#1E1E1E] border border-[#F5F5F1]/10 rounded-xl p-6 md:p-10 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-8">Request a Booking</h3>
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="name">Full Name</label>
+<input class="bg-[#1E1E1E] border-b border-outline-variant text-on-surface px-0 py-3 focus:ring-0 focus:border-primary-container transition-colors" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="phone">Phone Number</label>
+<input class="bg-[#1E1E1E] border-b border-outline-variant text-on-surface px-0 py-3 focus:ring-0 focus:border-primary-container transition-colors" id="phone" placeholder="+234 ..." type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="date">Date</label>
+<input class="bg-[#1E1E1E] border-b border-outline-variant text-on-surface px-0 py-3 focus:ring-0 focus:border-primary-container transition-colors [color-scheme:dark]" id="date" type="date"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="time">Time</label>
+<select class="bg-[#1E1E1E] border-b border-outline-variant text-on-surface px-0 py-3 focus:ring-0 focus:border-primary-container transition-colors appearance-none" id="time">
+<option>18:00</option>
+<option>19:00</option>
+<option>20:00</option>
+<option>21:00</option>
+<option>22:00</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="party">Party Size</label>
+<select class="bg-[#1E1E1E] border-b border-outline-variant text-on-surface px-0 py-3 focus:ring-0 focus:border-primary-container transition-colors appearance-none" id="party">
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5+ Guests</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="notes">Special Requests</label>
+<textarea class="bg-[#1E1E1E] border-b border-outline-variant text-on-surface px-0 py-3 focus:ring-0 focus:border-primary-container transition-colors resize-none" id="notes" placeholder="Dietary requirements, celebrations..." rows="3"></textarea>
+</div>
+<button class="mt-8 bg-primary-container text-[#fff2f0] font-label-sm text-label-sm uppercase py-4 px-8 rounded-lg hover:opacity-90 transition-opacity w-full flex justify-center items-center gap-2" type="submit">
+<span>Request Booking</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Contact & Location Column -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Direct Contact -->
+<div class="bg-[#1E1E1E] border border-[#F5F5F1]/10 rounded-xl p-6 md:p-10 flex flex-col gap-6">
+<h4 class="font-headline-md text-headline-md text-on-surface">Direct Contact</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">For immediate assistance or large group inquiries.</p>
+<div class="flex flex-col gap-4">
+<button class="border border-[#F5F5F1]/30 text-[#e5e2e1] font-label-sm text-label-sm uppercase py-4 px-6 rounded-lg hover:bg-surface-variant transition-colors flex items-center justify-between w-full">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined">call</span>
+                                Call Us
+                            </span>
+<span>+234 800 NATIVE</span>
+</button>
+<button class="border border-[#F5F5F1]/30 text-[#e5e2e1] font-label-sm text-label-sm uppercase py-4 px-6 rounded-lg hover:bg-surface-variant transition-colors flex items-center justify-between w-full">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined">chat</span>
+                                WhatsApp
+                            </span>
+<span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Location -->
+<div class="bg-[#1E1E1E] border border-[#F5F5F1]/10 rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-variant relative">
+<img alt="Map Location" class="w-full h-full object-cover opacity-60 grayscale mix-blend-luminosity" data-location="Lagos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBN4ajie4qruuIK-Zu3UKAhT5F1lLSbzFipqf_Pf5hbxlZJKHtYNQdqQueqn8nOlkzB9Ddg7P70Uv7-EZt4vn7jv9Qqyq5G6vhA8QAl1n60CwDyhkll9g5PU3ubUoBfr9fvBuXNtXXwrX2dDB-8IdZR9eKBm1GhRJ43jfKYWftX84TU35qGczY34QLN-drJiaXl7W_0cDyl3cOx_ZaKze18BTvd8XXyHx-hk0emh31hL6K-JyAe5PLE0DE3bcRh9vYYEyObvoDTg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1E1E1E] to-transparent"></div>
+<div class="absolute bottom-4 left-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<h4 class="font-headline-md text-headline-md text-on-surface">Lagos Flagship</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">14 Suya Avenue, Victoria Island<br/>Lagos, Nigeria</p>
+<p class="font-body-md text-body-md text-primary mt-2">Open Tue - Sun, 6PM - Late</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-on-surface/10 mt-auto">
+<div class="flex flex-col gap-12 px-margin-mobile md:px-margin-desktop py-16 max-w-container-max-width mx-auto w-full">
+<div class="font-headline-md text-headline-md text-on-surface">The Native Grill</div>
+<div class="flex flex-wrap gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Facebook</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="text-primary hover:text-primary transition-colors" href="#">Contact Us</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-8">© 2024 The Native Grill. Refined Embers.</div>
+</div>
+</footer>
+</body></html>

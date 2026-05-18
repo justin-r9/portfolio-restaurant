@@ -1,17 +1,128 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="The Native Grill - Refined Embers">
+  <Header />
+  
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center pt-16">
+      <div class="absolute inset-0 z-0 bg-surface-container-lowest">
+        <img src="/images/hero_bg_1779117776774.png" alt="Cinematic close-up of premium meat cooking on a traditional charcoal grill" class="w-full h-full object-cover opacity-70" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+      </div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center px-margin-mobile max-w-[800px]">
+        <h1 class="font-display-lg-mobile md:font-display-lg text-[40px] md:text-[64px] text-on-surface mb-6 drop-shadow-2xl">
+            Premium Grills.<br/>Authentic Naija Flavours.
+        </h1>
+        <p class="font-body-lg text-[18px] text-on-surface-variant mb-10 max-w-[600px]">
+            Elevating the raw energy of street food into a curated, sensory dining experience.
+        </p>
+        <a href="/menu" class="bg-primary-container text-on-primary-container px-8 py-4 rounded font-label-sm text-[12px] uppercase tracking-widest hover:bg-inverse-primary transition-colors active:scale-95 shadow-[0_20px_40px_rgba(0,0,0,0.5)] inline-block">
+            Explore Our Menu
+        </a>
+      </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <section class="py-12 bg-surface border-y border-on-surface/10">
+      <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-gutter">
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">schedule</span>
+          <div>
+            <h3 class="font-label-sm text-[12px] uppercase text-on-surface-variant mb-1">Hours</h3>
+            <p class="font-body-md text-[16px] text-on-surface">Tue - Sun: 5PM - Late</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          <div>
+            <h3 class="font-label-sm text-[12px] uppercase text-on-surface-variant mb-1">Location</h3>
+            <p class="font-body-md text-[16px] text-on-surface">Independence Layout, Enugu</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">call</span>
+          <div>
+            <h3 class="font-label-sm text-[12px] uppercase text-on-surface-variant mb-1">Contact</h3>
+            <p class="font-body-md text-[16px] text-on-surface">+234 (0) 800 NATIVE</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Dishes Carousel -->
+    <section class="py-24 bg-background overflow-hidden">
+      <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+        <h2 class="font-headline-lg text-[32px] text-on-surface border-l-2 border-primary-container pl-4">Signatures</h2>
+      </div>
+      <div class="flex overflow-x-auto pb-8 gap-6 px-margin-mobile md:px-margin-desktop snap-x snap-mandatory no-scrollbar">
+        <!-- Card 1 -->
+        <div class="min-w-[280px] md:min-w-[360px] snap-center bg-surface-container rounded-lg border border-on-surface/10 overflow-hidden group">
+          <div class="relative aspect-square">
+            <img src="/images/beef_suya_1779117790873.png" alt="Signature Beef Suya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm">
+              <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Signature Beef Suya</h3>
+              <p class="font-body-md text-[16px] text-on-surface-variant mb-4 line-clamp-2">Prime cuts marinated in our ancestral Yaji spice blend, slow-grilled over charcoal.</p>
+              <a href="/menu" class="font-label-sm text-[12px] uppercase tracking-wider text-primary-container hover:text-primary transition-colors flex items-center gap-1">
+                  View Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="min-w-[280px] md:min-w-[360px] snap-center bg-surface-container rounded-lg border border-on-surface/10 overflow-hidden group">
+          <div class="relative aspect-square">
+            <img src="/images/grilled_prawns_1779117805585.png" alt="Fire-Roasted Prawns" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm">
+              <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Fire-Roasted Prawns</h3>
+              <p class="font-body-md text-[16px] text-on-surface-variant mb-4 line-clamp-2">Jumbo tiger prawns kissed by the flames, served with a charred citrus glaze.</p>
+              <a href="/menu" class="font-label-sm text-[12px] uppercase tracking-wider text-primary-container hover:text-primary transition-colors flex items-center gap-1">
+                  View Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="min-w-[280px] md:min-w-[360px] snap-center bg-surface-container rounded-lg border border-on-surface/10 overflow-hidden group">
+          <div class="relative aspect-square">
+            <img src="/images/smoked_cocktail_1779117825097.png" alt="Smoked Embers Cocktail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background/90 to-transparent backdrop-blur-sm">
+              <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Smoked Embers Cocktail</h3>
+              <p class="font-body-md text-[16px] text-on-surface-variant mb-4 line-clamp-2">A complex blend of aged spirits, infused with hickory smoke and local bitters.</p>
+              <a href="/menu" class="font-label-sm text-[12px] uppercase tracking-wider text-primary-container hover:text-primary transition-colors flex items-center gap-1">
+                  View Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Teaser -->
+    <section class="py-24 bg-surface border-t border-on-surface/10">
+      <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative aspect-[4/5] rounded-lg overflow-hidden border border-on-surface/10">
+          <img src="/images/interior_lounge_1779117840201.png" alt="Upscale dark interior of the restaurant" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col items-start max-w-lg">
+          <h2 class="font-headline-lg text-[32px] text-on-surface mb-6">The Art of the Flame</h2>
+          <p class="font-body-md text-[16px] text-on-surface-variant mb-8">
+              Born from a reverence for traditional Nigerian grilling techniques, The Native Grill redefines the Suya experience. We believe that true flavor lies in the careful balance of heat, smoke, and time. Our space is designed to immerse you in this primal yet refined atmosphere, where every bite tells a story of heritage and culinary craftsmanship.
+          </p>
+          <a href="/about" class="bg-transparent border border-on-surface/30 text-on-surface px-8 py-4 rounded font-label-sm text-[12px] uppercase tracking-widest hover:border-primary-container hover:text-primary-container transition-colors active:scale-95 inline-block">
+              Read Our Story
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</MainLayout>

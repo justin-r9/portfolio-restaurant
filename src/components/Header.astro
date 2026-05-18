@@ -1,0 +1,80 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1) || '';
+---
+
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-on-surface/10 transition-all h-16">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-container-max-width mx-auto">
+    <a href="/" class="font-headline-md text-[24px] md:text-[24px] tracking-tight text-on-surface hover:opacity-80 transition-opacity">
+      The Native Grill
+    </a>
+    
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 md:hidden">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class={`font-label-sm text-[12px] hover:opacity-80 transition-opacity uppercase tracking-wider ${currentPath.includes('menu') ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant'}`} href="/menu">Menu</a>
+      <a class={`font-label-sm text-[12px] hover:opacity-80 transition-opacity uppercase tracking-wider ${currentPath.includes('about') ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant'}`} href="/about">Our Story</a>
+      <a class={`font-label-sm text-[12px] hover:opacity-80 transition-opacity uppercase tracking-wider ${currentPath.includes('contact') ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant'}`} href="/contact">Reservations</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-drawer-backdrop" class="fixed inset-0 z-40 bg-background/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+<nav id="mobile-drawer" class="fixed inset-y-0 right-0 z-50 h-full w-80 max-w-[80vw] bg-surface/95 backdrop-blur-xl shadow-2xl flex flex-col p-8 gap-6 border-l border-on-surface/10 translate-x-full transition-transform duration-300 ease-in-out">
+  <div class="flex justify-between items-center mb-8">
+    <div class="font-headline-md text-[24px] text-primary">The Native Grill</div>
+    <button id="close-menu-btn" class="text-on-surface-variant hover:text-primary transition-colors active:scale-95">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  
+  <a class="flex items-center gap-4 text-on-surface-variant pl-4 hover:text-primary transition-colors duration-300" href="/menu">
+    <span class="material-symbols-outlined">restaurant_menu</span>
+    <span class="font-body-md text-[16px]">Menu</span>
+  </a>
+  <a class="flex items-center gap-4 text-on-surface-variant pl-4 hover:text-primary transition-colors duration-300" href="/contact">
+    <span class="material-symbols-outlined">event_available</span>
+    <span class="font-body-md text-[16px]">Reservations</span>
+  </a>
+  <a class="flex items-center gap-4 text-on-surface-variant pl-4 hover:text-primary transition-colors duration-300" href="/about">
+    <span class="material-symbols-outlined">history</span>
+    <span class="font-body-md text-[16px]">Our Story</span>
+  </a>
+  <a class="flex items-center gap-4 text-on-surface-variant pl-4 hover:text-primary transition-colors duration-300" href="/contact">
+    <span class="material-symbols-outlined">contact_support</span>
+    <span class="font-body-md text-[16px]">Contact</span>
+  </a>
+</nav>
+
+<script>
+  // Setup mobile menu
+  function setupMobileMenu() {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    const backdrop = document.getElementById('mobile-drawer-backdrop');
+
+    function toggleMenu() {
+      if (drawer && backdrop) {
+        drawer.classList.toggle('translate-x-full');
+        backdrop.classList.toggle('opacity-0');
+        backdrop.classList.toggle('pointer-events-none');
+        document.body.classList.toggle('overflow-hidden');
+      }
+    }
+
+    menuBtn?.addEventListener('click', toggleMenu);
+    closeBtn?.addEventListener('click', toggleMenu);
+    backdrop?.addEventListener('click', toggleMenu);
+  }
+
+  // Astro View Transitions support
+  document.addEventListener('astro:page-load', setupMobileMenu);
+  // Initial load
+  setupMobileMenu();
+</script>
