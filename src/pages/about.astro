@@ -52,8 +52,12 @@ import Footer from '../components/Footer.astro';
             <p class="font-headline-md text-[24px] text-on-surface italic mb-4">"We don't just cook food; we curate memories heavily spiced with nostalgia."</p>
             <p class="font-label-sm text-[12px] text-primary-container uppercase tracking-wider">— Head Chef, Tunde A.</p>
           </div>
-          <div class="aspect-video rounded-xl overflow-hidden border border-on-surface/10 relative">
-             <img src="/images/spices_1779117880508.png" alt="Spice blend" class="w-full h-full object-cover" />
+          <div class="aspect-video rounded-xl overflow-hidden border border-on-surface/10 relative group">
+             <img src="/images/spices_1779117880508.png" alt="Spice blend" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+             <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
+             <div class="absolute bottom-0 left-0 p-6">
+                <p class="font-body-md text-[14px] md:text-[16px] text-on-surface-variant leading-tight">Our signature Yaji spice blend is crafted in-house daily, toasting 14 individual spices over open embers.</p>
+             </div>
           </div>
         </div>
 
