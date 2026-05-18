@@ -21,7 +21,7 @@ import Footer from '../components/Footer.astro';
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="flex flex-col gap-2">
               <label for="date" class="font-label-sm text-[12px] text-on-surface-variant uppercase tracking-wider">Date</label>
-              <input type="date" id="date" name="date" class="bg-surface border border-on-surface/20 rounded p-4 text-on-surface font-body-md text-[16px] focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" required>
+              <input type="date" id="date" name="date" class="bg-surface border border-on-surface/20 rounded p-4 text-on-surface font-body-md text-[16px] focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors [&::-webkit-calendar-picker-indicator]:mr-2 [&::-webkit-calendar-picker-indicator]:cursor-pointer" required>
             </div>
             <div class="flex flex-col gap-2">
               <label for="time" class="font-label-sm text-[12px] text-on-surface-variant uppercase tracking-wider">Time</label>
